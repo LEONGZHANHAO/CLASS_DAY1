@@ -1,25 +1,58 @@
 :root {
-	color-scheme: light;
-	font-family: "Avenir Next", "Trebuchet MS", sans-serif;
-	color: #172a26;
-	background-color: #f3f5ef;
+	color-scheme: dark;
+	--background: #0c0b0d;
+	--surface: #151316;
+	--surface-raised: #1c191d;
+	--text: #f7f2f1;
+	--muted: #b2a7a7;
+	--muted-strong: #d0c4c3;
+	--border: rgb(255 242 240 / 11%);
+	--border-strong: rgb(255 242 240 / 17%);
+	--accent-coral: #ff796c;
+	--accent-pink: #eb79a0;
+	--accent-orange: #ffb16d;
+	--accent-gradient: linear-gradient(110deg, var(--accent-coral), var(--accent-pink) 54%, var(--accent-orange));
+	--font-sans: "Avenir Next", "Trebuchet MS", sans-serif;
+	--radius-card: 18px;
+	--radius-input: 999px;
+	--shadow-card: 0 22px 70px rgb(0 0 0 / 28%);
+	font-family: var(--font-sans);
+	color: var(--text);
+	background: var(--background);
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-* {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 }
 
 body {
+	position: relative;
+	isolation: isolate;
 	min-width: 320px;
 	min-height: 100vh;
 	margin: 0;
-	background-color: #f3f5ef;
-	background-image: radial-gradient(#dce3da 0.75px, transparent 0.75px);
-	background-size: 18px 18px;
+	background: var(--background);
+	color: var(--text);
+}
+
+body::before {
+	position: fixed;
+	z-index: 0;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 560px;
+	background:
+		radial-gradient(76% 88% at 50% 0%, rgb(222 91 113 / 21%), transparent 72%),
+		linear-gradient(180deg, rgb(255 143 108 / 5%), transparent 88%);
+	content: "";
+	pointer-events: none;
 }
 
 button,
