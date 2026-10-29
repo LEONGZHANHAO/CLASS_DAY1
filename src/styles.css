@@ -1,0 +1,33 @@
+:root {
+	color-scheme: light;
+	font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+	color: #172a26;
+	background-color: #f3f5ef;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+	margin: 0;
+	background-color: #f3f5ef;
+	background-image: radial-gradient(#dce3da 0.75px, transparent 0.75px);
+	background-size: 18px 18px;
+}
+
+button,
+input {
+	font: inherit;
+}
+
+button,
+a {
+	-webkit-tap-highlight-color: transparent;
+}
